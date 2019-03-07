@@ -1,12 +1,13 @@
 #pragma once
 
+//--- Standard Includes
 #include <string>
 #include <vector>
 #include <sstream>
-
-#include <boost/iostreams/device/mapped_file.hpp>
 #include <iostream>
 
+//--- Boost Includes
+#include <boost/iostreams/device/mapped_file.hpp>
 
 namespace io {
 	static std::string read(const std::string& filepath) {
