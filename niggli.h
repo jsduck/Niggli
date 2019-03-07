@@ -6,7 +6,7 @@
 
 struct niggli
 {
-	bool reduce(std::vector<double> &vals, double epsilon, int max_loops = 50) {
+	static bool reduce(std::vector<double> &vals, double epsilon, int max_loops = 50) {
 		using namespace boost::math;
 
 		// variable for breaking out of the reduction loop
