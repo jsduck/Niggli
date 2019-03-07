@@ -40,8 +40,7 @@ int main(int argc, char* argv[])
 	vals.push_back(io::stod(*gb.find_value("_cell_angle_beta")));
 	vals.push_back(io::stod(*gb.find_value("_cell_angle_gamma")));
 
-	niggli n;
-	if (!n.reduce(vals, 0.0000001, 100))
+	if (!niggli::reduce(vals, 0.0000001, 100))
 		numReductionFailures++;
 	else {
 		for (auto &val : vals)
